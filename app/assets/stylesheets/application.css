@@ -11,6 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+#icon {
+	width : 25px;
+}
+
 #table-2 {
 	border: 1px solid #e3e3e3;
 	background-color: #f2f2f2;

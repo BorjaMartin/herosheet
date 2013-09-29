@@ -15,16 +15,14 @@
       <th>Subclase</th>
       <th>Bio</th>
       <th>Oro</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Admin</th>
     </tr>
   </thead>
 
   <tbody>
     <% @heros.each do |hero| %>
       <tr>
-        <td><%= hero.nombre %></td>
+        <td><%= link_to hero.nombre, hero %></td>
         <td><%= hero.jugador %></td>
         <td><%= hero.reputacion %></td>
         <td><%= hero.nivel %></td>
@@ -36,9 +34,8 @@
         <td><%= hero.subclase %></td>
         <td><%= hero.bio %></td>
         <td><%= hero.oro %></td>
-        <td><%= link_to 'Show', hero %></td>
-        <td><%= link_to 'Edit', edit_hero_path(hero) %></td>
-        <td><%= link_to 'Destroy', hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to image_tag("edit.png",   :id => "icon") , edit_hero_path(hero) %>
+        	<%= link_to image_tag("delete.png", :id => "icon"), hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
