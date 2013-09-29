@@ -1,4 +1,5 @@
 class HerosController < ApplicationController
+  http_basic_authenticate_with :name => "admin", :password => "admin"
   before_action :set_hero, only: [:show, :edit, :update, :destroy]
 
   # GET /heros
