@@ -12,8 +12,13 @@
  *= require_tree .
  */
 
+
 #icon {
 	width : 25px;
+}
+
+#symbol {
+	width : 35px;
 }
 
 #table-2 {
