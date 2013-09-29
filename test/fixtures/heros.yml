@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  jugador: MyString
+  reputacion: 1
+  nivel: 1
+  sexo: false
+  cuerpo: 1
+  mente: 1
+  movimiento: 1
+  personaje: MyString
+  subclase: MyString
+  bio: MyText
+  oro: 1
+
+two:
+  nombre: MyString
+  jugador: MyString
+  reputacion: 1
+  nivel: 1
+  sexo: false
+  cuerpo: 1
+  mente: 1
+  movimiento: 1
+  personaje: MyString
+  subclase: MyString
+  bio: MyText
+  oro: 1

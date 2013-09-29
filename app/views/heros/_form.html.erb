@@ -1,0 +1,65 @@
+<%= form_for(@hero) do |f| %>
+  <% if @hero.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hero.errors.count, "error") %> prohibited this hero from being saved:</h2>
+
+      <ul>
+      <% @hero.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :jugador %><br>
+    <%= f.text_field :jugador %>
+  </div>
+  <div class="field">
+    <%= f.label :reputacion %><br>
+    <%= f.number_field :reputacion %>
+  </div>
+  <div class="field">
+    <%= f.label :nivel %><br>
+    <%= f.number_field :nivel %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo %><br>
+    <%= f.check_box :sexo %>
+  </div>
+  <div class="field">
+    <%= f.label :cuerpo %><br>
+    <%= f.number_field :cuerpo %>
+  </div>
+  <div class="field">
+    <%= f.label :mente %><br>
+    <%= f.number_field :mente %>
+  </div>
+  <div class="field">
+    <%= f.label :movimiento %><br>
+    <%= f.number_field :movimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :personaje %><br>
+    <%= f.text_field :personaje %>
+  </div>
+  <div class="field">
+    <%= f.label :subclase %><br>
+    <%= f.text_field :subclase %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label :oro %><br>
+    <%= f.number_field :oro %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

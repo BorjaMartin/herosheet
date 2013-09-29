@@ -1,0 +1,49 @@
+<h1>Listing heros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Jugador</th>
+      <th>Reputacion</th>
+      <th>Nivel</th>
+      <th>Sexo</th>
+      <th>Cuerpo</th>
+      <th>Mente</th>
+      <th>Movimiento</th>
+      <th>Personaje</th>
+      <th>Subclase</th>
+      <th>Bio</th>
+      <th>Oro</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heros.each do |hero| %>
+      <tr>
+        <td><%= hero.nombre %></td>
+        <td><%= hero.jugador %></td>
+        <td><%= hero.reputacion %></td>
+        <td><%= hero.nivel %></td>
+        <td><%= hero.sexo %></td>
+        <td><%= hero.cuerpo %></td>
+        <td><%= hero.mente %></td>
+        <td><%= hero.movimiento %></td>
+        <td><%= hero.personaje %></td>
+        <td><%= hero.subclase %></td>
+        <td><%= hero.bio %></td>
+        <td><%= hero.oro %></td>
+        <td><%= link_to 'Show', hero %></td>
+        <td><%= link_to 'Edit', edit_hero_path(hero) %></td>
+        <td><%= link_to 'Destroy', hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hero', new_hero_path %>
