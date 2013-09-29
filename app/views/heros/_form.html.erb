@@ -28,8 +28,10 @@
     <%= f.number_field :nivel %>
   </div>
   <div class="field">
-    <%= f.label :sexo , "Personaje masculino"%><br>
-    <%= f.check_box :sexo %>
+	<%= radio_button_tag(:sexo, true) %>
+	<%= label_tag(:sexo, "Masculino") %>
+	<%= radio_button_tag(:sexo, false) %>
+	<%= label_tag(:sexo, "Femenino") %>
   </div>
   <div class="field">
     <%= f.label :cuerpo %><br>
