@@ -30,7 +30,8 @@
         <td><%= hero.mente %></td>
         <td><%= hero.movimiento %></td>
         <td><%= image_tag("#{hero.subclase.downcase}.png", :id => "symbol") %>
-			<%= "#{hero.personaje} #{hero.subclase}" %></td>	
+			<%= "#{hero.personaje} #{hero.subclase}" %>
+        </td>	
         <td><%= hero.oro %></td>
         <td><%= link_to image_tag("edit.png",   :id => "symbol") , edit_hero_path(hero) %>
         	<%= link_to image_tag("delete.png", :id => "symbol"), hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
