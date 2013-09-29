@@ -13,7 +13,6 @@
       <th>Movimiento</th>
       <th>Personaje</th>
       <th>Subclase</th>
-      <th>Bio</th>
       <th>Oro</th>
       <th>Admin</th>
     </tr>
@@ -26,13 +25,12 @@
         <td><%= hero.jugador %></td>
         <td><%= hero.reputacion %></td>
         <td><%= hero.nivel %></td>
-        <td><%= hero.sexo %></td>
+        <td><%= hero.sexo ? image_tag("male.png", :id => "icon") : image_tag("female.png", :id => "icon") %></td>
         <td><%= hero.cuerpo %></td>
         <td><%= hero.mente %></td>
         <td><%= hero.movimiento %></td>
         <td><%= hero.personaje %></td>
         <td><%= hero.subclase %></td>
-        <td><%= hero.bio %></td>
         <td><%= hero.oro %></td>
         <td><%= link_to image_tag("edit.png",   :id => "icon") , edit_hero_path(hero) %>
         	<%= link_to image_tag("delete.png", :id => "icon"), hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
