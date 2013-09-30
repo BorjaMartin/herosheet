@@ -21,8 +21,10 @@
   <tbody>
     <% @heros.each do |hero| %>
       <tr>
-        <td><%= link_to hero.nombre, hero %></td>
-        <td><%= hero.jugador %></td>
+        <td><%= link_to hero.nombre, hero %>
+			</br>
+			<%= hero.jugador %>
+		</td>
         <td><%= hero.reputacion %></td>
         <td><%= hero.nivel %></td>
         <td><%= hero.sexo ? image_tag("male.png", :id => "symbol") : image_tag("female.png", :id => "symbol") %></td>
