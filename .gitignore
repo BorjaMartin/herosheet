@@ -1,3 +1,7 @@
+# OSX
+.DS_Store
+
+# Ignore files:
 *.rbc
 *.sassc
 .sass-cache
